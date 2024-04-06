@@ -5,7 +5,11 @@ class CALCULYATOR
     static void Main()
     {
         Console.Write("Добро пожаловать. Можете приступать к работе!");
-        try
+        bool exit = false;
+
+        do
+        { 
+            try
         {
             Console.WriteLine("Простой калькулятор");
 
@@ -49,7 +53,15 @@ class CALCULYATOR
         }
 
         Console.WriteLine("Результат: " + result);
-    }
+
+        Console.Write("Хотите ли завершить работу? (да/нет): ");
+            string finish = Console.ReadLine();
+
+            if (finish.ToLower() == "да")
+            {
+                exit = true;
+            }
+        }
         catch (FormatException)
         {
             Console.WriteLine("Ошибка: Введены некорректные данные. Пожалуйста, введите числа.");
@@ -58,5 +70,6 @@ class CALCULYATOR
         {
     Console.WriteLine("Произошла ошибка: " + ex.Message);
         }
+    } while (!exit);
     }
 }  
