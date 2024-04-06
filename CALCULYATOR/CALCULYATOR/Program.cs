@@ -4,6 +4,7 @@ class CALCULYATOR
 {
     static void Main()
     {
+        Console.Write("Добро пожаловать. Можете приступать к работе!");
         try
         {
             Console.WriteLine("Простой калькулятор");
