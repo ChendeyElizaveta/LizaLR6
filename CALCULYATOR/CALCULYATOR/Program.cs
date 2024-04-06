@@ -30,6 +30,15 @@ class CALCULYATOR
                 break;
             case '/':
                 result = number1 / number2;
+            if (number2 != 0)
+                {
+                    result = number1 / number2;
+                }
+            else
+                {
+                    Console.WriteLine("Ошибка: деление на ноль");
+            return;
+                }
                 break;
         }
 
